@@ -16,7 +16,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_navigationSidebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigationSidebar */ \"./modules/navigationSidebar.js\");\n\n\n(0,_modules_navigationSidebar__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_navigationSidebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigationSidebar */ \"./modules/navigationSidebar.js\");\n\r\n\r\n(0,_modules_navigationSidebar__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setActiveClass\": () => (/* binding */ setActiveClass),\n/* harmony export */   \"removeActiveClass\": () => (/* binding */ removeActiveClass)\n/* harmony export */ });\nconst setActiveClass = (elem, index) => {\n    elem[index].classList.add('active')\n}\n\nconst removeActiveClass = (elem, index) => {\n    elem[index].classList.remove('active')\n}\n\n\n\n//# sourceURL=webpack:///./modules/helpers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setActiveClass\": () => (/* binding */ setActiveClass),\n/* harmony export */   \"removeActiveClass\": () => (/* binding */ removeActiveClass)\n/* harmony export */ });\nconst setActiveClass = (elem, index) => {\r\n    elem[index].classList.add('active')\r\n}\r\n\r\nconst removeActiveClass = (elem, index) => {\r\n    elem[index].classList.remove('active')\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./modules/helpers.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./modules/helpers.js\");\n\n\nconst navigationSidebar = () => {\n    const sidebar = document.getElementById('header')\n    const navItems = sidebar.querySelectorAll('nav>ul>li>a');\n\n    let currentActiveElem = 0\n\n    navItems.forEach((item, index) => {\n        item.addEventListener('click', (e) => {\n            const href = document.querySelector(item.getAttribute('href'));\n\n            e.preventDefault();\n            href.scrollIntoView({block:\"center\", behavior: \"smooth\"});\n\n            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.removeActiveClass)(navItems, currentActiveElem);\n            currentActiveElem = index;\n            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.setActiveClass)(navItems, currentActiveElem);\n        })\n    })\n\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navigationSidebar);\n\n//# sourceURL=webpack:///./modules/navigationSidebar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ \"./modules/helpers.js\");\n\r\n\r\nconst navigationSidebar = () => {\r\n    const sidebar = document.getElementById('header')\r\n    const navItems = sidebar.querySelectorAll('nav>ul>li>a');\r\n\r\n    let currentActiveElem = 0\r\n\r\n    navItems.forEach((item, index) => {\r\n        item.addEventListener('click', (e) => {\r\n            const href = document.querySelector(item.getAttribute('href'));\r\n\r\n            e.preventDefault();\r\n            href.scrollIntoView({block:\"center\", behavior: \"smooth\"});\r\n\r\n            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.removeActiveClass)(navItems, currentActiveElem);\r\n            currentActiveElem = index;\r\n            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.setActiveClass)(navItems, currentActiveElem);\r\n        })\r\n    })\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navigationSidebar);\n\n//# sourceURL=webpack:///./modules/navigationSidebar.js?");
 
 /***/ })
 
