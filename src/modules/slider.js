@@ -1,19 +1,20 @@
-import {Autoplay, Pagination, Swiper} from "swiper";
+import {Navigation, Pagination, Swiper} from "swiper";
 
 const slider = () => {
 
     const slider = new Swiper ('.mySwiper', {
-        modules: [Pagination, Autoplay],
+        modules: [Pagination, Navigation],
         loop: true,
+        speed: 1000,
         slidesPerView: 1,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
         pagination: {
             el: ".swiper-pagination",
-            type:"bullets",
+            type: "bullets",
+            clickable: true
+        },
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
         }
     });
 }
