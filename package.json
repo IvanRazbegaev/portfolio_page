@@ -10,10 +10,12 @@
   },
   "author": "Ivan Razbegaev",
   "license": "ISC",
-
   "devDependencies": {
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
+  },
+  "dependencies": {
+    "swiper": "^7.3.1"
   }
 }

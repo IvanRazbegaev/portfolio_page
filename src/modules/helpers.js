@@ -6,4 +6,11 @@ const removeActiveClass = (elem, index) => {
     elem[index].classList.remove('active')
 }
 
-export {setActiveClass,removeActiveClass}
+const hideElement = (elem, index) => {
+    elem[index].style.display = 'none';
+}
+
+const showElement = (elem, index) => {
+    elem[index].style.display = 'flex';
+}
+export {setActiveClass,removeActiveClass, hideElement, showElement}
