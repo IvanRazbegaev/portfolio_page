@@ -9,17 +9,41 @@ const contactForm = async () => {
     const submit = form.querySelector('input[type="submit"]');
     const reset = form.querySelector('input[type="reset"]');
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-
     const validate = () => {
-        let validatedEmail = false;
-        if (email.value.matches(emailPattern)){
-            validatedEmail = true
-        } else {
-            alert ('Entered email is not valid!');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const validatedEmail = email.value.match(emailPattern);
+
+        if (!validatedEmail){
+            alert ('Please enter a valid email!');
+            return false;
         }
     }
+    const resetValues = () => {
+        name.value = '';
+        subject.value = '';
+        email.value = '';
+        message.value = '';
+    }
+
+    reset.addEventListener('click', (e) => {
+        e.preventDefault();
+        resetValues();
+    })
+
+    submit.addEventListener('click', (e) => {
+        if (validate()){
+            e.preventDefault();
+            const sendBody = {
+                name: name.value ,
+                subject: subject.value,
+                email: email.value,
+                message: message.value
+            }
+            console.log(sendBody);
+            resetValues();
+        }
+    })
 
     name.addEventListener('input', (e) => {
         e.target.value = e.target.value.replace(/[^\D]/gi, '');
