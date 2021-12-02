@@ -9,6 +9,17 @@ const contactForm = async () => {
     const submit = form.querySelector('input[type="submit"]');
     const reset = form.querySelector('input[type="reset"]');
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+
+    const validate = () => {
+        let validatedEmail = false;
+        if (email.value.matches(emailPattern)){
+            validatedEmail = true
+        } else {
+            alert ('Entered email is not valid!');
+        }
+    }
 
     name.addEventListener('input', (e) => {
         e.target.value = e.target.value.replace(/[^\D]/gi, '');
