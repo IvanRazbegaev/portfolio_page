@@ -14,11 +14,15 @@ const showElement = (elem, index) => {
     elem[index].style.display = 'flex';
 }
 
-const sendData = async (service, data) => {
-    const sendingData = fetch(service, {
-        method: 'POST',
-        body:JSON.stringify(data)
-    })
-    return (await sendingData).json();
-}
-export {setActiveClass,removeActiveClass, hideElement, showElement, sendData}
+
+/*
+Пока что данная функция не требуется. Нужно поднимать свою отправку почты (Go, php?)
+ */
+// const sendData = async (service, data) => {
+//     const sendingData = fetch(service, {
+//         method: 'POST',
+//         body:JSON.stringify(data)
+//     })
+//     return (await sendingData).json();
+// }
+export {setActiveClass,removeActiveClass, hideElement, showElement}
