@@ -1,4 +1,4 @@
-const contactForm = async () => {
+const contactForm = () => {
 
     const form = document.querySelector('form');
     const name = document.getElementById('name');
